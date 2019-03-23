@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		D4211A1F22452B2E00B2556D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A1E22452B2E00B2556D /* AppDelegate.swift */; };
 		D4211A2122452B2E00B2556D /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A2022452B2E00B2556D /* BeginRunVC.swift */; };
-		D4211A2322452B2E00B2556D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A2222452B2E00B2556D /* SecondViewController.swift */; };
+		D4211A2322452B2E00B2556D /* MyLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A2222452B2E00B2556D /* MyLogVC.swift */; };
 		D4211A2622452B2E00B2556D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4211A2422452B2E00B2556D /* Main.storyboard */; };
 		D4211A2B22452B3000B2556D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4211A2922452B3000B2556D /* LaunchScreen.storyboard */; };
 		D431067A22466E0A00781439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D431067922466E0A00781439 /* Assets.xcassets */; };
+		D431067C22467B5200781439 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D431067B22467B5200781439 /* RunLogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D4211A1B22452B2E00B2556D /* Treds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4211A1E22452B2E00B2556D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4211A2022452B2E00B2556D /* BeginRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRunVC.swift; sourceTree = "<group>"; };
-		D4211A2222452B2E00B2556D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D4211A2222452B2E00B2556D /* MyLogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogVC.swift; sourceTree = "<group>"; };
 		D4211A2522452B2E00B2556D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4211A2A22452B3000B2556D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4211A2C22452B3000B2556D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		D4211A4822453A3200B2556D /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		D4211A4922453A3200B2556D /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		D431067922466E0A00781439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D431067B22467B5200781439 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D4211A2022452B2E00B2556D /* BeginRunVC.swift */,
-				D4211A2222452B2E00B2556D /* SecondViewController.swift */,
+				D4211A2222452B2E00B2556D /* MyLogVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 		D4211A3722452EE300B2556D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D431067B22467B5200781439 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,8 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4211A2322452B2E00B2556D /* SecondViewController.swift in Sources */,
+				D4211A2322452B2E00B2556D /* MyLogVC.swift in Sources */,
 				D4211A1F22452B2E00B2556D /* AppDelegate.swift in Sources */,
+				D431067C22467B5200781439 /* RunLogCell.swift in Sources */,
 				D4211A2122452B2E00B2556D /* BeginRunVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
