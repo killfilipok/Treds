@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40BD7E3225DF33E00D3AAB7 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BD7E2225DF33E00D3AAB7 /* Run.swift */; };
 		D4211A1F22452B2E00B2556D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A1E22452B2E00B2556D /* AppDelegate.swift */; };
 		D4211A2122452B2E00B2556D /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A2022452B2E00B2556D /* BeginRunVC.swift */; };
 		D4211A2322452B2E00B2556D /* MyLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4211A2222452B2E00B2556D /* MyLogVC.swift */; };
@@ -17,9 +18,14 @@
 		D44D58F3224AC5C3007BF014 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D58F2224AC5C3007BF014 /* CurrentRunVC.swift */; };
 		D44D58F5224AD682007BF014 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D58F4224AD682007BF014 /* LocationVC.swift */; };
 		D48FB617225D2C4C00E5C8B8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FB616225D2C4C00E5C8B8 /* Extentions.swift */; };
+		D9491905B3183C9CC25ADFFA /* Pods_Treds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE3527046874886F98F085A /* Pods_Treds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3385BAE56A151D1AE62542F9 /* Pods-Treds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treds/Pods-Treds.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE3527046874886F98F085A /* Pods_Treds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC7A44248082ED53B8B1A75A /* Pods-Treds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treds.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treds/Pods-Treds.release.xcconfig"; sourceTree = "<group>"; };
+		D40BD7E2225DF33E00D3AAB7 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		D4211A1B22452B2E00B2556D /* Treds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4211A1E22452B2E00B2556D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4211A2022452B2E00B2556D /* BeginRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRunVC.swift; sourceTree = "<group>"; };
@@ -57,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9491905B3183C9CC25ADFFA /* Pods_Treds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768830DE27B5FB9D57C04102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3385BAE56A151D1AE62542F9 /* Pods-Treds.debug.xcconfig */,
+				BC7A44248082ED53B8B1A75A /* Pods-Treds.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		884797C8384BBFA035667932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE3527046874886F98F085A /* Pods_Treds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4211A1222452B2E00B2556D = {
 			isa = PBXGroup;
 			children = (
 				D4211A1D22452B2E00B2556D /* Treds */,
 				D4211A1C22452B2E00B2556D /* Products */,
+				768830DE27B5FB9D57C04102 /* Pods */,
+				884797C8384BBFA035667932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +177,7 @@
 		D4211A3622452EDD00B2556D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D40BD7E2225DF33E00D3AAB7 /* Run.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4211A2F22452B3000B2556D /* Build configuration list for PBXNativeTarget "Treds" */;
 			buildPhases = (
+				FF93BD93AF2E13182598B1C2 /* [CP] Check Pods Manifest.lock */,
 				D4211A1722452B2E00B2556D /* Sources */,
 				D4211A1822452B2E00B2556D /* Frameworks */,
 				D4211A1922452B2E00B2556D /* Resources */,
+				5AE329729C71D0145C70ABBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,12 +258,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AE329729C71D0145C70ABBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Treds/Pods-Treds-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Treds/Pods-Treds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF93BD93AF2E13182598B1C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Treds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4211A1722452B2E00B2556D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4211A2322452B2E00B2556D /* MyLogVC.swift in Sources */,
+				D40BD7E3225DF33E00D3AAB7 /* Run.swift in Sources */,
 				D44D58F3224AC5C3007BF014 /* CurrentRunVC.swift in Sources */,
 				D4211A1F22452B2E00B2556D /* AppDelegate.swift in Sources */,
 				D431067C22467B5200781439 /* RunLogCell.swift in Sources */,
@@ -384,6 +455,7 @@
 		};
 		D4211A3022452B3000B2556D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3385BAE56A151D1AE62542F9 /* Pods-Treds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,6 +473,7 @@
 		};
 		D4211A3122452B3000B2556D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7A44248082ED53B8B1A75A /* Pods-Treds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
