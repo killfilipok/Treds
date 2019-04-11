@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class CurrentRunVC: LocationVC {
     
@@ -18,13 +19,13 @@ class CurrentRunVC: LocationVC {
     @IBOutlet weak var distanceLbl: UILabel!
     @IBOutlet weak var pauseBtn: UIButton!
     
-    var startLocation: CLLocation!
-    var lastLocation: CLLocation!
-    var timer = Timer()
-    var runDistance = 0.0
-    var peace = 0
-    var timeCounter = 0
-    
+    fileprivate var startLocation: CLLocation!
+    fileprivate var lastLocation: CLLocation!
+    fileprivate var timer = Timer()
+    fileprivate var runDistance = 0.0
+    fileprivate var pace = 0
+    fileprivate var timeCounter = 0
+    fileprivate var coordinateLocations = List<Location>()
     
     
     override func viewDidLoad() {
@@ -56,7 +57,7 @@ class CurrentRunVC: LocationVC {
     
     func endRun(){
         manager?.stopUpdatingLocation()
-        //add Obj to Realm
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: timeCounter, locations: coordinateLocations)
     }
     
     func pauseRun(){
@@ -73,8 +74,8 @@ class CurrentRunVC: LocationVC {
     }
     
     func calculatePeace(time seconds: Int, miles: Double) -> String{
-        peace = Int(Double(seconds) / miles)
-        return peace.formatTimeDurationToString()
+        pace = Int(Double(seconds) / miles)
+        return pace.formatTimeDurationToString()
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
@@ -126,10 +127,12 @@ extension CurrentRunVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if startLocation  == nil {
-           startLocation = locations.first
+            startLocation = locations.first
         } else if let location = locations.last {
-           runDistance += lastLocation.distance(from: location)
-           distanceLbl.text = "\(runDistance.metersToMiles(places: 2))"
+            runDistance += lastLocation.distance(from: location)
+            let location = Location(lat: Double(lastLocation.coordinate.latitude), long: Double(lastLocation.coordinate.longitude))
+            coordinateLocations.insert(location, at: 0)
+            distanceLbl.text = "\(runDistance.metersToMiles(places: 2))"
             if timeCounter > 0 && runDistance > 0 {
                 paceLbl.text = calculatePeace(time: timeCounter, miles: runDistance.metersToMiles(places: 2))
             }
